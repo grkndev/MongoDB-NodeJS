@@ -10,6 +10,8 @@ import mongoose, { Schema } from "mongoose";
     Şema için örnek bir arayüz oluşturuyoruz bunu kullanmadan da oluşturabilirsiniz.
     Ben kullanmayı tercih ediyorum.
 */
+
+//TypeScript
 // interface Example {
 //   name: string;
 //   email: string;
