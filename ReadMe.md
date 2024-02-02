@@ -108,4 +108,4 @@ export default mongoose.model("User", ExampleSchema);
 ```
 
 # Kullanım
-[App.ts](/src/app.js)
+[App.js](/src/app.js)
