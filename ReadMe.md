@@ -66,8 +66,8 @@ npm install mongoose
 > Önce bir tabloya ihtiyacımız olacak. Bunun için bir tane oluşturalım Mongo'da şema olarak geçiyor.
 
 Örnek Model
-[ExampleModel.ts](/src/models/ExampleModel.ts)
-```ts
+[ExampleModel.js](/src/models/ExampleModel.js)
+```js
 /*
     Veritabanı için bir SQL'de ki gibi bir tablo oluşturmamız gerekiyor.
     Mongoda bunun için bir şema oluşturacağız.
@@ -80,14 +80,16 @@ import mongoose, { Schema } from "mongoose";
     Şema için örnek bir arayüz oluşturuyoruz bunu kullanmadan da oluşturabilirsiniz.
     Ben kullanmayı tercih ediyorum.
 */
-interface Example {
-  name: string;
-  email: string;
-  avatar?: string;
-}
+// Typscript
+// interface Example {
+//   name: string;
+//   email: string;
+//   avatar?: string;
+// }
 
 //Yeni bir Schema oluşturduk.
-const ExampleSchema = new Schema<Example>({
+// const ExampleSchema = new Schema<Example>({
+const ExampleSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   avatar: String,
@@ -106,4 +108,4 @@ export default mongoose.model("User", ExampleSchema);
 ```
 
 # Kullanım
-[App.ts](/src/app.ts)
+[App.ts](/src/app.js)
