@@ -10,14 +10,15 @@ import mongoose, { Schema } from "mongoose";
     Şema için örnek bir arayüz oluşturuyoruz bunu kullanmadan da oluşturabilirsiniz.
     Ben kullanmayı tercih ediyorum.
 */
-interface Example {
-  name: string;
-  email: string;
-  avatar?: string;
-}
+// interface Example {
+//   name: string;
+//   email: string;
+//   avatar?: string;
+// }
 
 //Yeni bir Schema oluşturduk.
-const ExampleSchema = new Schema<Example>({
+// const ExampleSchema = new Schema<Example>({
+  const ExampleSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   avatar: String,

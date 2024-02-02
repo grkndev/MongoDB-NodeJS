@@ -1,12 +1,20 @@
+import mongoose from "mongoose"; //Apimiz
+import DataBase from "./models/ExampleModel.js"; //Modelimiz
+
 const url =
   "mongodb+srv://root:RootUser@cluster0.1ztzw3m.mongodb.net/AwesomeCollection";
 /*
 mongodb.com'dan aldığımız URL.
 `AwesomeCollection` Collection'ımızın adı. Bunu değiştirerek farklı isimlerde oluşturabilirsiniz.
 */
-import mongoose from "mongoose"; //Apimiz
-import DataBase from "./models/ExampleModel";//Modelimiz
 
+main();
+async function main() {
+  await Connect();
+  // await CreateNew();
+  await FindOne();
+  await UpdateOne();
+}
 async function Connect() {
   mongoose
     .connect(url)
