@@ -42,3 +42,32 @@
 
 ![Foto](/images/11.png)
 > Sol menüden **database** kısmına geri dönelim. Bu sayfada **Connect** butonuna basalım. 
+
+![Foto](/images/12.png)
+> Bağlantı için Erişim ayarlamamız gerekiyor. Ben her IP'den erişime veriyorum.
+
+![Foto](/images/13.png)
+> **MongoDB for VSCode** seçeneği ile URL bağlantımızı alıyoruz.
+
+![Foto](/images/14.png)
+> Bu sayfada Belirtilen URL'i kopyalayalım.
+
+<hr />
+
+# Bağlantı Kurma
+### Mongo hazırlarımızı yaptık ve veritabanımızı oluşturduk. Artık Bağlantı kurulaım
+
+> Öncelikle kütüphaneyi indirelim
+```bash
+npm install mongoose
+```
+
+> Artık kodlamaya geçebiliriz. 
+> Önce bir tabloya ihtiyacımız olacak. Bunun için bir tane oluşturalım Mongo'da şema olarak geçiyor.
+
+Örnek Model
+[ExampleModel.ts](/src/models/ExampleModel.ts)
+
+
+# Kullanım
+[App.ts](/src/app.ts)
